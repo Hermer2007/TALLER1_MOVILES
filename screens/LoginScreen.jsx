@@ -1,30 +1,56 @@
-import { StyleSheet, Text, View, ImageBackground,TextInput, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground,TextInput, Image, TouchableOpacity,Vibration } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-
+import { useState } from 'react'
 export default function LoginScreen() {
-  const navigation = useNavigation();
-  return (
-    <ImageBackground 
-          source={require('../assets/images/login.jpg')}
-          style={styles.background}
-          resizeMode="cover"
-        >
-        <View style={styles.containerLogin}>
-            <Image source={require('../assets/images/pc-game.png')} style={styles.logo}/>
-            <TextInput style={styles.input} placeholder='Username' />
-            <TextInput style={styles.input} placeholder='Password' secureTextEntry={true} />
+    const navigation = useNavigation();
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    function verificarUsuario(){
+        let usuarioV = 'admin';
+        let passwordV = 'admin123';
+        if(username === usuarioV && password === passwordV){
+            navigation.navigate('Home');
+        }else{
+            alert('Usuario o contraseña incorrectos');
+        }    
 
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText} onPress={() => navigation.navigate('Home')}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Registro')}>
-                <Text style={styles.buttonText}>Registrarse</Text>
-            </TouchableOpacity>
-        </View>
-    </ImageBackground>
-   
-  )
+        Vibration.vibrate([1000,4000,1000]);
+    }
+    return (
+        <ImageBackground 
+            source={require('../assets/images/login.jpg')}
+            style={styles.background}
+            resizeMode="cover"
+            >
+            <View style={styles.containerLogin}>
+                <Image source={require('../assets/images/pc-game.png')} style={styles.logo}/>
+                <TextInput 
+                    style={styles.input} 
+                    placeholder='Username' 
+                    value = {username}
+                    onChangeText = { (texto) => setUsername(texto)}
+                />
+                <TextInput 
+                    style={styles.input}   
+                    placeholder='Password' 
+                    secureTextEntry={true} 
+                    value = {password}
+                    onChangeText = { (texto) => setPassword(texto) }
+                />
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.button} onPress={verificarUsuario}>
+                        <Text style={styles.buttonText}>Login</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Registro')}>
+                        <Text style={styles.buttonText}>Registrarse</Text>
+                    </TouchableOpacity>
+                </View>
+            
+            </View>
+        </ImageBackground>
+    
+    )
 }
 
 const styles = StyleSheet.create({
@@ -52,12 +78,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button:{
-        backgroundColor: '#5ed7ad',
+        backgroundColor: '#89a11d',
         paddingVertical: 10,    
         paddingHorizontal: 20,
         borderRadius: 5,
         marginBottom: 10,
+        marginHorizontal: 5,
     },
-
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 20,
+    },
 
 })
