@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "nombre": "iPhone 15 Pro",
+    "descripcion": "Pantalla Super Retina XDR de 6.1 pulgadas, chip A17 Pro, 128GB de almacenamiento, cámara triple de 48MP y acabado en titanio.",
+    "precio": 1299,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71xx+3z4PpL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Samsung Galaxy S24 Ultra",
+    "descripcion": "Pantalla Dynamic AMOLED 6.8”, 256GB, 12GB RAM, cámara de 200MP y batería de larga duración de 5000mAh.",
+    "precio": 1199,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71MbdK2Q8-L._AC_SL1500_.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Xiaomi 14 Pro",
+    "descripcion": "Pantalla AMOLED 6.7”, Snapdragon 8 Gen 3, 256GB almacenamiento, cámara Leica profesional.",
+    "precio": 899,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71lFJtZJqPL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Google Pixel 8 Pro",
+    "descripcion": "Pantalla OLED 6.7”, procesador Tensor G3, cámara con inteligencia artificial avanzada y Android puro.",
+    "precio": 999,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71xLmdLO+2L._AC_SL1500_.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Motorola Edge 40",
+    "descripcion": "Pantalla pOLED 6.5”, 256GB, 8GB RAM, diseño elegante y carga rápida de 68W.",
+    "precio": 699,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/61uR6p8V5yL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "OnePlus 12",
+    "descripcion": "Pantalla AMOLED LTPO de 6.82 pulgadas, Snapdragon 8 Gen 3, 256GB de almacenamiento, 12GB RAM y carga ultra rápida de 100W.",
+    "precio": 899,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71yZJpYJk0L._AC_SL1500_.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Huawei P60 Pro",
+    "descripcion": "Pantalla OLED 6.67”, 256GB, cámara XMAGE de alta precisión con zoom avanzado y batería de 4815mAh.",
+    "precio": 949,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/61eJ0oG9kIL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Sony Xperia 1 V",
+    "descripcion": "Pantalla OLED 4K HDR de 6.5”, 256GB, cámara profesional con sensor Exmor T y sonido Hi-Res Audio.",
+    "precio": 1099,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/61kZ3p6Y8XL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Realme GT 5 Pro",
+    "descripcion": "Pantalla AMOLED 6.78”, Snapdragon 8 Gen 3, 256GB almacenamiento, diseño premium y batería de 5400mAh.",
+    "precio": 799,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71gR9sEJ8mL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Honor Magic 6 Pro",
+    "descripcion": "Pantalla OLED 6.8”, 512GB, cámara triple de alto rendimiento y procesador Snapdragon 8 Gen 3.",
+    "precio": 999,
+    "categoria": "Telefono",
+    "imagen": "https://m.media-amazon.com/images/I/71QKQ9mwV7L._AC_SL1500_.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "iPhone 14",
+    "descripcion": "Pantalla Super Retina XDR de 6.1 pulgadas, chip A15 Bionic, 128GB de almacenamiento y sistema de cámara dual avanzado.",
+    "precio": 899,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=11"
+  },
+  {
+    "id": 12,
+    "nombre": "Samsung Galaxy A54",
+    "descripcion": "Pantalla AMOLED 6.4”, 128GB, 8GB RAM, batería de 5000mAh y cámara triple de alta resolución.",
+    "precio": 499,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=12"
+  },
+  {
+    "id": 13,
+    "nombre": "Xiaomi Redmi Note 13 Pro",
+    "descripcion": "Pantalla AMOLED 6.67”, 256GB almacenamiento, 12GB RAM y cámara principal de 200MP.",
+    "precio": 449,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=13"
+  },
+  {
+    "id": 14,
+    "nombre": "Oppo Find X6 Pro",
+    "descripcion": "Pantalla AMOLED 6.82”, Snapdragon 8 Gen 2, 256GB almacenamiento y sistema de cámara Hasselblad.",
+    "precio": 899,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=14"
+  },
+  {
+    "id": 15,
+    "nombre": "Asus ROG Phone 7",
+    "descripcion": "Pantalla AMOLED 6.78”, Snapdragon 8 Gen 2, 512GB almacenamiento y diseñado especialmente para gaming.",
+    "precio": 1099,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=15"
+  },
+  {
+    "id": 16,
+    "nombre": "Google Pixel 7a",
+    "descripcion": "Pantalla OLED de 6.1 pulgadas, procesador Tensor G2, 128GB de almacenamiento y excelente rendimiento fotográfico con inteligencia artificial.",
+    "precio": 499,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=16"
+  },
+  {
+    "id": 17,
+    "nombre": "Nothing Phone 2",
+    "descripcion": "Pantalla OLED 6.7”, diseño transparente con interfaz Glyph LED, 256GB almacenamiento y rendimiento fluido con Snapdragon 8+ Gen 1.",
+    "precio": 699,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=17"
+  },
+  {
+    "id": 18,
+    "nombre": "Vivo X100 Pro",
+    "descripcion": "Pantalla AMOLED 6.78”, 256GB, cámara profesional ZEISS y batería de larga duración con carga rápida.",
+    "precio": 899,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=18"
+  },
+  {
+    "id": 19,
+    "nombre": "ZTE Nubia Z60 Ultra",
+    "descripcion": "Pantalla AMOLED 6.8”, Snapdragon 8 Gen 3, 256GB almacenamiento y cámara bajo pantalla innovadora.",
+    "precio": 799,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=19"
+  },
+  {
+    "id": 20,
+    "nombre": "Motorola Moto G84",
+    "descripcion": "Pantalla pOLED 6.5”, 128GB almacenamiento, 8GB RAM y batería de 5000mAh ideal para uso diario.",
+    "precio": 399,
+    "categoria": "Telefono",
+    "imagen": "https://picsum.photos/300/300?random=20"
+  },
+  {
+    "id": 21,
+    "nombre": "MacBook Pro 14 M3",
+    "descripcion": "Pantalla Liquid Retina XDR de 14 pulgadas, chip Apple M3, 512GB SSD y 16GB RAM, ideal para diseño y edición profesional.",
+    "precio": 1999,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=21"
+  },
+  {
+    "id": 22,
+    "nombre": "Dell XPS 13",
+    "descripcion": "Pantalla InfinityEdge 13.4”, Intel Core i7, 512GB SSD y 16GB RAM, ultraligera y potente para productividad.",
+    "precio": 1499,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=22"
+  },
+  {
+    "id": 23,
+    "nombre": "HP Spectre x360",
+    "descripcion": "Laptop convertible 2 en 1, pantalla táctil 13.5”, Intel Core i7, 512GB SSD y diseño premium.",
+    "precio": 1399,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=23"
+  },
+  {
+    "id": 24,
+    "nombre": "Lenovo ThinkPad X1 Carbon",
+    "descripcion": "Pantalla 14”, Intel Core i7, 1TB SSD, 16GB RAM y construcción ultrarresistente para uso empresarial.",
+    "precio": 1699,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=24"
+  },
+  {
+    "id": 25,
+    "nombre": "Asus ROG Strix G16",
+    "descripcion": "Laptop gamer con pantalla 16”, Intel Core i9, 1TB SSD, 16GB RAM y tarjeta gráfica RTX 4060.",
+    "precio": 1799,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=25"
+  },
+  {
+    "id": 26,
+    "nombre": "Acer Predator Helios 300",
+    "descripcion": "Laptop gamer 15.6”, Intel Core i7, 512GB SSD, 16GB RAM y RTX 3060 para alto rendimiento.",
+    "precio": 1499,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=26"
+  },
+  {
+    "id": 27,
+    "nombre": "MSI Katana 15",
+    "descripcion": "Pantalla 15.6” Full HD, Intel Core i7, 1TB SSD, 16GB RAM y GPU RTX 4070.",
+    "precio": 1599,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=27"
+  },
+  {
+    "id": 28,
+    "nombre": "Huawei MateBook D16",
+    "descripcion": "Pantalla 16”, Intel Core i5, 512GB SSD, 16GB RAM y diseño ligero para estudio y trabajo.",
+    "precio": 899,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=28"
+  },
+  {
+    "id": 29,
+    "nombre": "Microsoft Surface Laptop 5",
+    "descripcion": "Pantalla táctil 13.5”, Intel Core i7, 512GB SSD y diseño elegante con Windows 11.",
+    "precio": 1299,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=29"
+  },
+  {
+    "id": 30,
+    "nombre": "Samsung Galaxy Book3 Pro",
+    "descripcion": "Pantalla AMOLED 14”, Intel Core i7, 512GB SSD y batería de larga duración.",
+    "precio": 1399,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=30"
+  },
+  {
+    "id": 31,
+    "nombre": "MacBook Air M2",
+    "descripcion": "Pantalla 13.6”, chip Apple M2, 256GB SSD y diseño ultraligero ideal para estudiantes.",
+    "precio": 1199,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=31"
+  },
+  {
+    "id": 32,
+    "nombre": "Lenovo IdeaPad 5",
+    "descripcion": "Pantalla 15.6”, AMD Ryzen 7, 512GB SSD y 16GB RAM para multitarea eficiente.",
+    "precio": 799,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=32"
+  },
+  {
+    "id": 33,
+    "nombre": "HP Victus 16",
+    "descripcion": "Laptop gamer 16.1”, Intel Core i7, 512GB SSD, 16GB RAM y RTX 4050.",
+    "precio": 1299,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=33"
+  },
+  {
+    "id": 34,
+    "nombre": "Asus ZenBook 14",
+    "descripcion": "Pantalla OLED 14”, Intel Core i7, 1TB SSD y diseño ultradelgado.",
+    "precio": 1099,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=34"
+  },
+  {
+    "id": 35,
+    "nombre": "Dell Inspiron 15",
+    "descripcion": "Pantalla 15.6”, Intel Core i5, 512GB SSD y 8GB RAM ideal para oficina y estudio.",
+    "precio": 749,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=35"
+  },
+  {
+    "id": 36,
+    "nombre": "Acer Aspire 5",
+    "descripcion": "Pantalla 15.6”, AMD Ryzen 5, 512GB SSD y 8GB RAM para uso diario.",
+    "precio": 699,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=36"
+  },
+  {
+    "id": 37,
+    "nombre": "MSI Modern 14",
+    "descripcion": "Pantalla 14”, Intel Core i5, 512GB SSD y diseño compacto y liviano.",
+    "precio": 799,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=37"
+  },
+  {
+    "id": 38,
+    "nombre": "Razer Blade 15",
+    "descripcion": "Laptop gamer premium 15.6”, Intel Core i9, 1TB SSD y RTX 4080 para máximo rendimiento.",
+    "precio": 2499,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=38"
+  },
+  {
+    "id": 39,
+    "nombre": "HP Pavilion 14",
+    "descripcion": "Pantalla 14”, Intel Core i5, 512GB SSD y diseño moderno para productividad.",
+    "precio": 849,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=39"
+  },
+  {
+    "id": 40,
+    "nombre": "Lenovo Legion 5",
+    "descripcion": "Laptop gamer 15.6”, AMD Ryzen 7, 1TB SSD, 16GB RAM y RTX 4060.",
+    "precio": 1599,
+    "categoria": "Computadora",
+    "imagen": "https://picsum.photos/300/300?random=40"
+  }
+]
