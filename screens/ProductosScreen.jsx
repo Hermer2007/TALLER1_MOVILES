@@ -11,11 +11,11 @@ export default function ProductosScreen() {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity 
-      style={styles.targeta}
-      onPress={() => {
-        setproductoSeleccionado(item);
-        setmodal(true);
-      }}
+    style={styles.targeta}         
+    onPress={() => {
+      setproductoSeleccionado(item);
+      setmodal(true);
+    }}
     >
       <Image source={{ uri: item.imagen }} style={styles.img} />
       <Text style={styles.titulo}>{item.nombre}</Text>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
 
   targeta: {
     flex: 1,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#b7cfdf',
     margin: 8,
     padding: 10,
     borderRadius: 12,
