@@ -1,6 +1,6 @@
 import {  StyleSheet,  Text,  View,  FlatList,  TouchableOpacity,  Alert,  Vibration,Image} from 'react-native'
 import React, { useState, useCallback } from 'react'
-import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal} from '../assets/data/carrito'
+import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal, aumentarCantidad,   disminuirCantidad} from '../assets/data/carrito'
 import { useFocusEffect } from '@react-navigation/native'
 
 
@@ -14,6 +14,15 @@ export default function CarritoScreen() {
     setCarrito([...datos])
     setTotal(obtenerTotal())
   }
+  function aumentar(id) {
+    aumentarCantidad(id)
+    actualizarCarrito()
+  }
+  function disminuir(id) {
+    disminuirCantidad(id)
+    actualizarCarrito()
+  }
+
   function eliminar(id) {
     eliminarDelCarrito(id)
     actualizarCarrito()
@@ -53,30 +62,53 @@ export default function CarritoScreen() {
         renderItem={({ item }) => (
 
           <View style={styles.producto}>
-            <View>
+            <View style = {styles.productoContainer}>
               <Image source={{ uri: item.imagen }} style={{ width: 100, height: 100, borderRadius: 10 }} />
-              <Text style={styles.nombre}>
-                {item.nombre}
-              </Text>
-              <Text>
-                Precio: ${item.precio}
-              </Text>
-              <Text>
-                Cantidad: {item.cantidad}
-              </Text>
-              <Text style={styles.subtotal}>
-                Subtotal: ${item.precio * item.cantidad}
-              </Text>
-            </View>
+              <View style={styles.infoContainer}>
+                <Text style={styles.nombre}>
+                  {item.nombre}
+                </Text>
+                <Text>
+                  Precio: ${item.precio}
+                </Text>
+                
+                 <View style={styles.cantidadContainer}>
 
-            <TouchableOpacity
-              style={styles.botonEliminar}
-              onPress={() => eliminar(item.id)}
-            >
-              <Text style={styles.textoBoton}>
-                Eliminar
-              </Text>
-            </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.botonCantidad}
+                    onPress={() => disminuir(item.id)}
+                  >
+                    <Text style={styles.textoCantidad}>
+                      −
+                    </Text>
+                  </TouchableOpacity>
+                  <Text style={styles.cantidad}>
+                    {item.cantidad}
+                  </Text>
+                  <TouchableOpacity
+                    style={styles.botonCantidad}
+                    onPress={() => aumentar(item.id)}
+                  >
+                    <Text style={styles.textoCantidad}>
+                      +
+                    </Text>
+                  </TouchableOpacity>
+
+                </View>
+                
+                <Text style={styles.subtotal}>
+                  Subtotal: ${item.precio * item.cantidad}
+                </Text>
+                <TouchableOpacity
+                  style={styles.botonEliminar}
+                  onPress={() => eliminar(item.id)}
+                >
+                  <Text style={styles.textoBoton}>
+                    Eliminar
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
         )}
       />
@@ -129,7 +161,7 @@ const styles = StyleSheet.create({
 
   subtotal: {
     fontWeight: "bold",
-    marginTop: 5
+    marginTop: 10
   },
 
   botonEliminar: {
@@ -174,6 +206,48 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 50,
     fontSize: 18
-  }
+  },
+  productoContainer: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+  },
+  infoContainer: {
+    marginLeft: 15,
+    flex: 1
+  },
+
+  cantidadContainer: {
+
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 10
+
+  },
+  botonCantidad: {
+
+    backgroundColor: "green",
+    width: 30,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8
+
+  },
+
+
+  textoCantidad: {
+
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold"
+
+  },
+  cantidad: {
+
+    marginHorizontal: 15,
+    fontSize: 18,
+    fontWeight: "bold"
+
+  },
 
 })

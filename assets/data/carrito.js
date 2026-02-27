@@ -36,4 +36,29 @@ export function obtenerTotal(){
         0
     );
 
+
 }
+
+export function aumentarCantidad(id) {
+
+  const producto = carrito.find(p => p.id === id);
+
+  if (producto) {
+    producto.cantidad += 1;
+  }
+
+}
+export function disminuirCantidad(id) {
+
+  const producto = carrito.find(p => p.id === id);
+
+  if (!producto) return;
+
+  if (producto.cantidad > 1) {
+    producto.cantidad -= 1;
+  } else {
+    eliminarDelCarrito(id);
+  }
+
+}
+
