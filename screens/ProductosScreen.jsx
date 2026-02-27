@@ -11,7 +11,7 @@ export default function ProductosScreen() {
 
   const renderItem=({item})=>(
     <TouchableOpacity 
-    style={styles.targeta}
+    style={styles.targeta}         
     onPress={() => {
       setproductoSeleccionado(item);
       setmodal(true);
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 
   targeta: {
     flex: 1,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#b7cfdf',
     margin: 8,
     padding: 10,
     borderRadius: 12,

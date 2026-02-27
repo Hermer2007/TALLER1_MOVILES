@@ -5,7 +5,7 @@
     "descripcion": "Pantalla Super Retina XDR de 6.1 pulgadas, chip A17 Pro, 128GB de almacenamiento, cámara triple de 48MP y acabado en titanio.",
     "precio": 1299,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71xx+3z4PpL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/29020349/pexels-photo-29020349.jpeg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "descripcion": "Pantalla Dynamic AMOLED 6.8”, 256GB, 12GB RAM, cámara de 200MP y batería de larga duración de 5000mAh.",
     "precio": 1199,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71MbdK2Q8-L._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/15493878/pexels-photo-15493878.jpeg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "descripcion": "Pantalla AMOLED 6.7”, Snapdragon 8 Gen 3, 256GB almacenamiento, cámara Leica profesional.",
     "precio": 899,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71lFJtZJqPL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/33376151/pexels-photo-33376151.jpeg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "descripcion": "Pantalla OLED 6.7”, procesador Tensor G3, cámara con inteligencia artificial avanzada y Android puro.",
     "precio": 999,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71xLmdLO+2L._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/1042143/pexels-photo-1042143.jpeg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "descripcion": "Pantalla pOLED 6.5”, 256GB, 8GB RAM, diseño elegante y carga rápida de 68W.",
     "precio": 699,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/61uR6p8V5yL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/12570216/pexels-photo-12570216.jpeg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "descripcion": "Pantalla AMOLED LTPO de 6.82 pulgadas, Snapdragon 8 Gen 3, 256GB de almacenamiento, 12GB RAM y carga ultra rápida de 100W.",
     "precio": 899,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71yZJpYJk0L._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "descripcion": "Pantalla OLED 6.67”, 256GB, cámara XMAGE de alta precisión con zoom avanzado y batería de 4815mAh.",
     "precio": 949,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/61eJ0oG9kIL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "descripcion": "Pantalla OLED 4K HDR de 6.5”, 256GB, cámara profesional con sensor Exmor T y sonido Hi-Res Audio.",
     "precio": 1099,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/61kZ3p6Y8XL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/3999536/pexels-photo-3999536.jpeg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "descripcion": "Pantalla AMOLED 6.78”, Snapdragon 8 Gen 3, 256GB almacenamiento, diseño premium y batería de 5400mAh.",
     "precio": 799,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71gR9sEJ8mL._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/797519/pexels-photo-797519.jpeg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "descripcion": "Pantalla OLED 6.8”, 512GB, cámara triple de alto rendimiento y procesador Snapdragon 8 Gen 3.",
     "precio": 999,
     "categoria": "Telefono",
-    "imagen": "https://m.media-amazon.com/images/I/71QKQ9mwV7L._AC_SL1500_.jpg"
+    "imagen": "https://images.pexels.com/photos/833337/pexels-photo-833337.png"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "descripcion": "Pantalla Super Retina XDR de 6.1 pulgadas, chip A15 Bionic, 128GB de almacenamiento y sistema de cámara dual avanzado.",
     "precio": 899,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=11"
+    "imagen": "https://images.pexels.com/photos/1275227/pexels-photo-1275227.jpeg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "descripcion": "Pantalla AMOLED 6.4”, 128GB, 8GB RAM, batería de 5000mAh y cámara triple de alta resolución.",
     "precio": 499,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=12"
+    "imagen": "https://images.pexels.com/photos/16149966/pexels-photo-16149966.jpeg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "descripcion": "Pantalla AMOLED 6.67”, 256GB almacenamiento, 12GB RAM y cámara principal de 200MP.",
     "precio": 449,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=13"
+    "imagen": "https://images.pexels.com/photos/214488/pexels-photo-214488.jpeg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "descripcion": "Pantalla AMOLED 6.82”, Snapdragon 8 Gen 2, 256GB almacenamiento y sistema de cámara Hasselblad.",
     "precio": 899,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=14"
+    "imagen": ""
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "descripcion": "Pantalla AMOLED 6.78”, Snapdragon 8 Gen 2, 512GB almacenamiento y diseñado especialmente para gaming.",
     "precio": 1099,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=15"
+    "imagen": ""
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "descripcion": "Pantalla OLED de 6.1 pulgadas, procesador Tensor G2, 128GB de almacenamiento y excelente rendimiento fotográfico con inteligencia artificial.",
     "precio": 499,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=16"
+    "imagen": ""
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "descripcion": "Pantalla OLED 6.7”, diseño transparente con interfaz Glyph LED, 256GB almacenamiento y rendimiento fluido con Snapdragon 8+ Gen 1.",
     "precio": 699,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=17"
+    "imagen": ""
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "descripcion": "Pantalla AMOLED 6.78”, 256GB, cámara profesional ZEISS y batería de larga duración con carga rápida.",
     "precio": 899,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=18"
+    "imagen": ""
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "descripcion": "Pantalla AMOLED 6.8”, Snapdragon 8 Gen 3, 256GB almacenamiento y cámara bajo pantalla innovadora.",
     "precio": 799,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=19"
+    "imagen": ""
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "descripcion": "Pantalla pOLED 6.5”, 128GB almacenamiento, 8GB RAM y batería de 5000mAh ideal para uso diario.",
     "precio": 399,
     "categoria": "Telefono",
-    "imagen": "https://picsum.photos/300/300?random=20"
+    "imagen": ""
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "descripcion": "Pantalla Liquid Retina XDR de 14 pulgadas, chip Apple M3, 512GB SSD y 16GB RAM, ideal para diseño y edición profesional.",
     "precio": 1999,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=21"
+    "imagen": "https://images.pexels.com/photos/18105/pexels-photo.jpg"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "descripcion": "Pantalla InfinityEdge 13.4”, Intel Core i7, 512GB SSD y 16GB RAM, ultraligera y potente para productividad.",
     "precio": 1499,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=22"
+    "imagen": ""
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "descripcion": "Laptop convertible 2 en 1, pantalla táctil 13.5”, Intel Core i7, 512GB SSD y diseño premium.",
     "precio": 1399,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=23"
+    "imagen": ""
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "descripcion": "Pantalla 14”, Intel Core i7, 1TB SSD, 16GB RAM y construcción ultrarresistente para uso empresarial.",
     "precio": 1699,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=24"
+    "imagen": ""
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "descripcion": "Laptop gamer con pantalla 16”, Intel Core i9, 1TB SSD, 16GB RAM y tarjeta gráfica RTX 4060.",
     "precio": 1799,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=25"
+    "imagen": ""
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "descripcion": "Laptop gamer 15.6”, Intel Core i7, 512GB SSD, 16GB RAM y RTX 3060 para alto rendimiento.",
     "precio": 1499,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=26"
+    "imagen": ""
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "descripcion": "Pantalla 15.6” Full HD, Intel Core i7, 1TB SSD, 16GB RAM y GPU RTX 4070.",
     "precio": 1599,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=27"
+    "imagen": ""
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "descripcion": "Pantalla 16”, Intel Core i5, 512GB SSD, 16GB RAM y diseño ligero para estudio y trabajo.",
     "precio": 899,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=28"
+    "imagen": ""
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@
     "descripcion": "Pantalla táctil 13.5”, Intel Core i7, 512GB SSD y diseño elegante con Windows 11.",
     "precio": 1299,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=29"
+    "imagen": ""
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@
     "descripcion": "Pantalla AMOLED 14”, Intel Core i7, 512GB SSD y batería de larga duración.",
     "precio": 1399,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=30"
+    "imagen": ""
   },
   {
     "id": 31,
@@ -245,7 +245,7 @@
     "descripcion": "Pantalla 13.6”, chip Apple M2, 256GB SSD y diseño ultraligero ideal para estudiantes.",
     "precio": 1199,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=31"
+    "imagen": ""
   },
   {
     "id": 32,
@@ -253,7 +253,7 @@
     "descripcion": "Pantalla 15.6”, AMD Ryzen 7, 512GB SSD y 16GB RAM para multitarea eficiente.",
     "precio": 799,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=32"
+    "imagen": ""
   },
   {
     "id": 33,
@@ -261,7 +261,7 @@
     "descripcion": "Laptop gamer 16.1”, Intel Core i7, 512GB SSD, 16GB RAM y RTX 4050.",
     "precio": 1299,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=33"
+    "imagen": ""
   },
   {
     "id": 34,
@@ -269,7 +269,7 @@
     "descripcion": "Pantalla OLED 14”, Intel Core i7, 1TB SSD y diseño ultradelgado.",
     "precio": 1099,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=34"
+    "imagen": ""
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "descripcion": "Pantalla 15.6”, Intel Core i5, 512GB SSD y 8GB RAM ideal para oficina y estudio.",
     "precio": 749,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=35"
+    "imagen": ""
   },
   {
     "id": 36,
@@ -285,7 +285,7 @@
     "descripcion": "Pantalla 15.6”, AMD Ryzen 5, 512GB SSD y 8GB RAM para uso diario.",
     "precio": 699,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=36"
+    "imagen": ""
   },
   {
     "id": 37,
@@ -293,7 +293,7 @@
     "descripcion": "Pantalla 14”, Intel Core i5, 512GB SSD y diseño compacto y liviano.",
     "precio": 799,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=37"
+    "imagen": ""
   },
   {
     "id": 38,
@@ -301,7 +301,7 @@
     "descripcion": "Laptop gamer premium 15.6”, Intel Core i9, 1TB SSD y RTX 4080 para máximo rendimiento.",
     "precio": 2499,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=38"
+    "imagen": ""
   },
   {
     "id": 39,
@@ -309,7 +309,7 @@
     "descripcion": "Pantalla 14”, Intel Core i5, 512GB SSD y diseño moderno para productividad.",
     "precio": 849,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=39"
+    "imagen": ""
   },
   {
     "id": 40,
@@ -317,6 +317,6 @@
     "descripcion": "Laptop gamer 15.6”, AMD Ryzen 7, 1TB SSD, 16GB RAM y RTX 4060.",
     "precio": 1599,
     "categoria": "Computadora",
-    "imagen": "https://picsum.photos/300/300?random=40"
+    "imagen": ""
   }
 ]
