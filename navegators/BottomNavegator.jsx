@@ -9,7 +9,30 @@ const Tab = createBottomTabNavigator();
 function MyTabs(){
 
     return(
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={{
+
+                headerShown: false,
+
+                tabBarStyle: {
+                backgroundColor: '#5b5656', // fondo del bottom
+                height: 60,
+                borderTopWidth: 0,
+                elevation: 10
+                },
+
+                tabBarActiveTintColor: '#5ed7ad', // color icono activo
+
+                tabBarInactiveTintColor: '#888', // color icono inactivo
+
+                tabBarLabelStyle: {
+                fontSize: 12,
+                fontWeight: 'bold'
+                }
+
+            }}
+        
+        >
             <Tab.Screen 
                 name="Productos" 
                 component={ProductosScreen}

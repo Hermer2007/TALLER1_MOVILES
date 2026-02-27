@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground,TextInput, Image, TouchableOpacity,Vibration } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground,TextInput, Image, TouchableOpacity,Vibration, Alert, ScrollView } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react'
@@ -12,18 +12,25 @@ export default function LoginScreen() {
         if(username === usuarioV && password === passwordV){
             navigation.navigate('Home');
         }else{
-            alert('Usuario o contraseña incorrectos');
+            Alert.alert("Alerta amigo","Usuario o contraseña incorrectos");
         }    
 
-        Vibration.vibrate([1000,4000,1000]);
+        Vibration.vibrate(1000);
     }
     return (
         <ImageBackground 
-            source={require('../assets/images/login.jpg')}
+            source={require('../assets/images/login2.jpg')}
             style={styles.background}
             resizeMode="cover"
             >
-            <View style={styles.containerLogin}>
+            <ScrollView
+                        contentContainerStyle={{
+                            flexGrow: 1,
+                            justifyContent: 'center',
+                        }}
+                        keyboardShouldPersistTaps="handled"
+                    >
+                <View style={styles.containerLogin}>
                 <Image source={require('../assets/images/pc-game.png')} style={styles.logo}/>
                 <TextInput 
                     style={styles.input} 
@@ -39,15 +46,17 @@ export default function LoginScreen() {
                     onChangeText = { (texto) => setPassword(texto) }
                 />
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button} onPress={verificarUsuario}>
+                    <TouchableOpacity style={styles.buttonLogin} onPress={verificarUsuario}>
                         <Text style={styles.buttonText}>Login</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Registro')}>
+                    <TouchableOpacity style={styles.buttonRegistrarse} onPress={() => navigation.navigate('Registro')}>
                         <Text style={styles.buttonText}>Registrarse</Text>
                     </TouchableOpacity>
                 </View>
             
             </View>
+            </ScrollView>
+            
         </ImageBackground>
     
     )
@@ -77,8 +86,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    button:{
-        backgroundColor: '#89a11d',
+    buttonLogin:{
+        backgroundColor: '#5ed7ad',
+        paddingVertical: 10,    
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        marginBottom: 10,
+        marginHorizontal: 5,
+    },
+    buttonRegistrarse:{
+        backgroundColor: '#ff6b6b',
         paddingVertical: 10,    
         paddingHorizontal: 20,
         borderRadius: 5,

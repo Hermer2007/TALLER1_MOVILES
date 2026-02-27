@@ -17,20 +17,21 @@ export default function RegistroScreen() {
     }
 
   return (
-      <ScrollView
+      
+        <ImageBackground 
+        source={require('../assets/images/registro3.jpg')}
+        style={styles.background}
+        resizeMode="cover"
+        >
+        <View style={styles.container}>
+          <ScrollView
             contentContainerStyle={{
                 flexGrow: 1,
                 justifyContent: 'center',
             }}
             keyboardShouldPersistTaps="handled"
-        >
-        <ImageBackground 
-        source={require('../assets/images/register.jpg')}
-        style={styles.background}
-        resizeMode="cover"
-        >
-        <View style={styles.container}>
-            <View style={styles.formContainer}>
+          >
+          <View style={styles.formContainer}>
                 <Text style={styles.titulo}>Registro de Usuario</Text>
                 <Text style={styles.texto}>Nombre</Text>
                 <TextInput 
@@ -82,9 +83,10 @@ export default function RegistroScreen() {
                     </TouchableOpacity>
                 </View>
             </View>
+          </ScrollView>
+            
         </View>
         </ImageBackground>
-    </ScrollView>
   )
 }
 
