@@ -1,6 +1,6 @@
 import {  StyleSheet,  Text,  View,  FlatList,  TouchableOpacity,  Alert,  Vibration,Image} from 'react-native'
 import React, { useState, useCallback } from 'react'
-import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal, aumentarCantidad,   disminuirCantidad} from '../assets/data/carrito'
+import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal, aumentarCantidad,   disminuirCantidad,  obtenerSubtotal,  obtenerIVA,} from '../assets/data/carrito'
 import { useFocusEffect } from '@react-navigation/native'
 
 
@@ -8,11 +8,16 @@ export default function CarritoScreen() {
 
   const [carrito, setCarrito] = useState([])
   const [total, setTotal] = useState(0)
+
+  const [subtotal, setSubtotal] = useState(0)
+  const [iva, setIva] = useState(0)
   useFocusEffect( useCallback(() => {  actualizarCarrito()  }, [])  )
-  function actualizarCarrito() {
-    const datos = obtenerCarrito()
-    setCarrito([...datos])
-    setTotal(obtenerTotal())
+ function actualizarCarrito() {
+  const datos = obtenerCarrito()
+  setCarrito([...datos])
+  setSubtotal(obtenerSubtotal())
+  setIva(obtenerIVA())
+  setTotal(obtenerTotal())
   }
   function aumentar(id) {
     aumentarCantidad(id)
@@ -113,9 +118,19 @@ export default function CarritoScreen() {
         )}
       />
       <View style={styles.footer}>
-        <Text style={styles.total}>
-          Total: ${total}
+
+        <Text style={styles.resumen}>
+          Subtotal: ${subtotal.toFixed(2)}
         </Text>
+
+        <Text style={styles.resumen}>
+          IVA (12%): ${iva.toFixed(2)}
+        </Text>
+
+        <Text style={styles.total}>
+          Total: ${total.toFixed(2)}
+        </Text>
+
         <TouchableOpacity
           style={styles.botonComprar}
           onPress={comprar}
@@ -124,6 +139,7 @@ export default function CarritoScreen() {
             Comprar
           </Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           style={styles.botonVaciar}
           onPress={vaciar}
@@ -132,6 +148,7 @@ export default function CarritoScreen() {
             Vaciar carrito
           </Text>
         </TouchableOpacity>
+
       </View>
     </View>
 
