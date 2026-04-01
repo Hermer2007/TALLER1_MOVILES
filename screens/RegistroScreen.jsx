@@ -1,23 +1,44 @@
-import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity,ScrollView,Vibration } from 'react-native'
-import React from 'react'
-import { useState } from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity, ScrollView, Vibration, Alert } from 'react-native'
+import React, { useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { SQLiteProvider } from 'expo-sqlite'
+import { useRegistroDB } from '../Services/registroBD'
 
-export default function RegistroScreen() {
+function FormularioRegistro() {
 
     const navigation = useNavigation();
+    const { iniciar, crear } = useRegistroDB();
+
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
-    const [email, setemail] = useState()
+    const [email, setemail] = useState('');
+    const [usuario, setusuario] = useState('');
     const [password, setPassword] = useState('');
 
-    function guardarInformacion() {
-  
-        Vibration.vibrate([1000,4000,1000]);
+    useEffect(() => {
+        iniciar();
+    }, []);
+
+    async function guardarInformacion() {
+
+        if(!nombre || !apellido || !email || !usuario || !password){
+            Alert.alert("Error", "Completa todos los campos");
+            return;
+        }
+
+        await crear(nombre, apellido, email, usuario, password);
+
+        Vibration.vibrate([100,400,100]);
+        Alert.alert("", "Información guardada con éxito");
+
+        setNombre('');
+        setApellido('');
+        setemail('');
+        setusuario('');
+        setPassword('');
     }
 
-  return (
-      
+    return (
         <ImageBackground 
         source={require('../assets/images/registro3.jpg')}
         style={styles.background}
@@ -33,22 +54,25 @@ export default function RegistroScreen() {
           >
           <View style={styles.formContainer}>
                 <Text style={styles.titulo}>Registro de Usuario</Text>
+
                 <Text style={styles.texto}>Nombre</Text>
                 <TextInput 
                     style={styles.input} 
                     placeholder='Nombre' 
                     placeholderTextColor="#555"
                     value={nombre}
-                    onChangeText={(texto)=> setNombre(texto)}
+                    onChangeText={setNombre}
                 />
+
                 <Text style={styles.texto}>Apellido</Text>
                 <TextInput 
                     style={styles.input} 
                     placeholder='Apellido' 
                     placeholderTextColor="#555"
                     value={apellido}
-                    onChangeText={(texto) => setApellido(texto)}
+                    onChangeText={setApellido}
                 />
+
                 <Text style={styles.texto}>Email</Text>
                 <TextInput 
                     style={styles.input} 
@@ -56,8 +80,18 @@ export default function RegistroScreen() {
                     keyboardType="email-address"
                     placeholderTextColor="#555"
                     value={email}
-                    onChangeText = {(texto) => setemail(texto)}
+                    onChangeText={setemail}
                 />
+
+                <Text style={styles.texto}>Usuario</Text>
+                <TextInput 
+                    style={styles.input} 
+                    placeholder='Usuario' 
+                    placeholderTextColor="#555"
+                    value={usuario}
+                    onChangeText={setusuario}
+                />
+
                 <Text style={styles.texto}>Password</Text>   
                 <TextInput 
                     style={styles.input} 
@@ -65,8 +99,9 @@ export default function RegistroScreen() {
                     secureTextEntry={true}
                     placeholderTextColor="#555"
                     value={password}
-                    onChangeText={ (texto)=> setPassword(texto)}
+                    onChangeText={setPassword}
                 />
+
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity 
                         style={styles.button} 
@@ -82,12 +117,20 @@ export default function RegistroScreen() {
                         <Text style={styles.buttonText}>Cancelar</Text>
                     </TouchableOpacity>
                 </View>
+
             </View>
           </ScrollView>
-            
         </View>
         </ImageBackground>
-  )
+    )
+}
+
+export default function RegistroScreen() {
+    return (
+        <SQLiteProvider databaseName="registro.db">
+            <FormularioRegistro/>
+        </SQLiteProvider>
+    )
 }
 
 const styles = StyleSheet.create({
