@@ -57,10 +57,8 @@ export function useCarritoDB() {
 
   return {
     iniciar: () => iniciarTablaRegistro(db),
-    crear: (producto, cantidad, valor_unitario, nombre_usuario, fecha_compra) =>
-      guardarRegistro(db, producto, cantidad, valor_unitario, nombre_usuario, fecha_compra),
-    guardarCompra: (carrito, nombre_usuario) =>
-      guardarCompraCompleta(db, carrito, nombre_usuario),
+    crear: (producto, cantidad, valor_unitario, nombre_usuario, fecha_compra) =>guardarRegistro(db, producto, cantidad, valor_unitario, nombre_usuario, fecha_compra),
+    guardarCompra: (carrito, nombre_usuario) => guardarCompraCompleta(db, carrito, nombre_usuario), 
     verHistorial: (nombre_usuario) => verHistorial(db, nombre_usuario),
   };
 }

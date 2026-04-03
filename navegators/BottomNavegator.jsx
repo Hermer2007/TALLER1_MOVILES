@@ -3,7 +3,7 @@ import ProductosScreen from '../screens/ProductosScreen';
 import CarritoScreen from '../screens/CarritoScreen';
 import ContactoScreen from '../screens/ContactoScreen';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-
+import HistorialScreen from '../screens/HistorialScreen';
 const Tab = createBottomTabNavigator();
 
 function MyTabs(){
@@ -41,6 +41,11 @@ function MyTabs(){
             <Tab.Screen 
                 name="Carrito" 
                 component = {CarritoScreen} 
+                options={{ tabBarIcon:()=><MaterialIcons name="shopping-cart" size={25} color="green" /> }} 
+            />
+            <Tab.Screen 
+                name="Historial" 
+                component = {HistorialScreen} 
                 options={{ tabBarIcon:()=><MaterialIcons name="shopping-cart" size={25} color="green" /> }} 
             />
             <Tab.Screen 

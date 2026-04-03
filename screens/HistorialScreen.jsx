@@ -1,17 +1,21 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { useCarritoDB } from '../assets/data/carritoBD';
+import { useCarritoDB } from '../Services/carritoBD';
 
 export default function HistoriaScreen() {
   const [historial, setHistorial] = useState([]);
   const { iniciar, verHistorial } = useCarritoDB();
 
-  // CAMBIA ESTO POR EL USUARIO REAL SI YA LO TIENES
   const nombre_usuario = 'alejandro';
 
   useEffect(() => {
-    iniciar();
+    async function init() {
+      await iniciar();
+      await cargarHistorial();
+    }
+
+    init();
   }, []);
 
   useFocusEffect(
@@ -23,9 +27,10 @@ export default function HistoriaScreen() {
   async function cargarHistorial() {
     try {
       const data = await verHistorial(nombre_usuario);
-      setHistorial(data);
+      setHistorial(data || []);
+      console.log('historial => ', data);
     } catch (error) {
-      console.log(error);
+      console.log('error historial => ', error);
     }
   }
 

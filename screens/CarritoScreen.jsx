@@ -1,26 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  Alert,
-  Vibration,
-  Image
-} from 'react-native';
+import {  StyleSheet,  Text,  View,  FlatList,  TouchableOpacity,  Alert,  Vibration,  Image} from 'react-native';
 import React, { useState, useCallback, useEffect } from 'react';
-import {
-  obtenerCarrito,
-  eliminarDelCarrito,
-  vaciarCarrito,
-  obtenerTotal,
-  aumentarCantidad,
-  disminuirCantidad,
-  obtenerSubtotal,
-  obtenerIVA,
-} from '../assets/data/carrito';
+import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal,  aumentarCantidad,  disminuirCantidad,  obtenerSubtotal,  obtenerIVA,} from '../assets/data/carrito';
 import { useFocusEffect } from '@react-navigation/native';
-import { useCarritoDB } from '../assets/data/carritoBD';
+import { useCarritoDB } from '../Services/carritoBD';
+
+
 
 export default function CarritoScreen() {
   const [carrito, setCarrito] = useState([]);
