@@ -1,124 +1,159 @@
-import {  StyleSheet,  Text,  View,  FlatList,  TouchableOpacity,  Alert,  Vibration,Image} from 'react-native'
-import React, { useState, useCallback } from 'react'
-import {  obtenerCarrito,  eliminarDelCarrito,  vaciarCarrito,  obtenerTotal, aumentarCantidad,   disminuirCantidad,  obtenerSubtotal,  obtenerIVA,} from '../assets/data/carrito'
-import { useFocusEffect } from '@react-navigation/native'
-
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
+  Alert,
+  Vibration,
+  Image
+} from 'react-native';
+import React, { useState, useCallback, useEffect } from 'react';
+import {
+  obtenerCarrito,
+  eliminarDelCarrito,
+  vaciarCarrito,
+  obtenerTotal,
+  aumentarCantidad,
+  disminuirCantidad,
+  obtenerSubtotal,
+  obtenerIVA,
+} from '../assets/data/carrito';
+import { useFocusEffect } from '@react-navigation/native';
+import { useCarritoDB } from '../assets/data/carritoBD';
 
 export default function CarritoScreen() {
+  const [carrito, setCarrito] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [subtotal, setSubtotal] = useState(0);
+  const [iva, setIva] = useState(0);
 
-  const [carrito, setCarrito] = useState([])
-  const [total, setTotal] = useState(0)
+  const { iniciar, guardarCompra } = useCarritoDB();
 
-  const [subtotal, setSubtotal] = useState(0)
-  const [iva, setIva] = useState(0)
-  useFocusEffect( useCallback(() => {  actualizarCarrito()  }, [])  )
- function actualizarCarrito() {
-  const datos = obtenerCarrito()
-  setCarrito([...datos])
-  setSubtotal(obtenerSubtotal())
-  setIva(obtenerIVA())
-  setTotal(obtenerTotal())
+  // CAMBIA ESTO POR EL USUARIO REAL SI YA LO TIENES
+  const nombre_usuario = 'alejandro';
+
+  useEffect(() => {
+    iniciar();
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      actualizarCarrito();
+    }, [])
+  );
+
+  function actualizarCarrito() {
+    const datos = obtenerCarrito();
+    setCarrito([...datos]);
+    setSubtotal(obtenerSubtotal());
+    setIva(obtenerIVA());
+    setTotal(obtenerTotal());
   }
+
   function aumentar(id) {
-    aumentarCantidad(id)
-    actualizarCarrito()
+    aumentarCantidad(id);
+    actualizarCarrito();
   }
+
   function disminuir(id) {
-    disminuirCantidad(id)
-    actualizarCarrito()
+    disminuirCantidad(id);
+    actualizarCarrito();
   }
 
   function eliminar(id) {
-    eliminarDelCarrito(id)
-    actualizarCarrito()
-  }
-  function vaciar() {
-    vaciarCarrito()
-    actualizarCarrito()
-  }
-  function comprar() {
-    Vibration.vibrate(500)
-    if (carrito.length === 0) {
-      Alert.alert("Alerta amigo", "El carrito está vacío")
-      return
-    }
-    Alert.alert("Compra realizada", "Gracias por tu compra")
-    
-    vaciar()
+    eliminarDelCarrito(id);
+    actualizarCarrito();
   }
 
+  function vaciar() {
+    vaciarCarrito();
+    actualizarCarrito();
+  }
+
+  async function comprar() {
+    Vibration.vibrate(500);
+
+    if (carrito.length === 0) {
+      Alert.alert('Alerta amigo', 'El carrito está vacío');
+      return;
+    }
+
+    try {
+      await guardarCompra(carrito, nombre_usuario);
+
+      Alert.alert('Compra realizada', 'Gracias por tu compra');
+      vaciar();
+    } catch (error) {
+      console.log(error);
+      Alert.alert('Error', 'No se pudo guardar la compra');
+    }
+  }
 
   return (
-
     <View style={styles.container}>
       <Text></Text>
       <Text></Text>
       <Text></Text>
+
       <FlatList
         data={carrito}
         keyExtractor={(item) => item.id.toString()}
-
         ListEmptyComponent={
           <Text style={styles.vacio}>
             El carrito está vacío
           </Text>
         }
-
         renderItem={({ item }) => (
-
           <View style={styles.producto}>
-            <View style = {styles.productoContainer}>
-              <Image source={{ uri: item.imagen }} style={{ width: 100, height: 100, borderRadius: 10 }} />
+            <View style={styles.productoContainer}>
+              <Image
+                source={{ uri: item.imagen }}
+                style={{ width: 100, height: 100, borderRadius: 10 }}
+              />
+
               <View style={styles.infoContainer}>
-                <Text style={styles.nombre}>
-                  {item.nombre}
-                </Text>
+                <Text style={styles.nombre}>{item.nombre}</Text>
+
                 <Text>
                   Precio: ${item.precio}
                 </Text>
-                
-                 <View style={styles.cantidadContainer}>
 
+                <View style={styles.cantidadContainer}>
                   <TouchableOpacity
                     style={styles.botonCantidad}
                     onPress={() => disminuir(item.id)}
                   >
-                    <Text style={styles.textoCantidad}>
-                      −
-                    </Text>
+                    <Text style={styles.textoCantidad}>−</Text>
                   </TouchableOpacity>
-                  <Text style={styles.cantidad}>
-                    {item.cantidad}
-                  </Text>
+
+                  <Text style={styles.cantidad}>{item.cantidad}</Text>
+
                   <TouchableOpacity
                     style={styles.botonCantidad}
                     onPress={() => aumentar(item.id)}
                   >
-                    <Text style={styles.textoCantidad}>
-                      +
-                    </Text>
+                    <Text style={styles.textoCantidad}>+</Text>
                   </TouchableOpacity>
-
                 </View>
-                
+
                 <Text style={styles.subtotal}>
-                  Subtotal: ${item.precio * item.cantidad}
+                  Subtotal: ${(item.precio * item.cantidad).toFixed(2)}
                 </Text>
+
                 <TouchableOpacity
                   style={styles.botonEliminar}
                   onPress={() => eliminar(item.id)}
                 >
-                  <Text style={styles.textoBoton}>
-                    Eliminar
-                  </Text>
+                  <Text style={styles.textoBoton}>Eliminar</Text>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
         )}
       />
-      <View style={styles.footer}>
 
+      <View style={styles.footer}>
         <Text style={styles.resumen}>
           Subtotal: ${subtotal.toFixed(2)}
         </Text>
@@ -135,37 +170,28 @@ export default function CarritoScreen() {
           style={styles.botonComprar}
           onPress={comprar}
         >
-          <Text style={styles.textoBoton}>
-            Comprar
-          </Text>
+          <Text style={styles.textoBoton}>Comprar</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.botonVaciar}
           onPress={vaciar}
         >
-          <Text style={styles.textoBoton}>
-            Vaciar carrito
-          </Text>
+          <Text style={styles.textoBoton}>Vaciar carrito</Text>
         </TouchableOpacity>
-
       </View>
     </View>
-
-  )
+  );
 }
 
-
-
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     padding: 20
   },
 
   producto: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: '#f2f2f2',
     padding: 15,
     marginBottom: 10,
     borderRadius: 10
@@ -173,98 +199,97 @@ const styles = StyleSheet.create({
 
   nombre: {
     fontSize: 18,
-    fontWeight: "bold"
+    fontWeight: 'bold'
   },
 
   subtotal: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginTop: 10
   },
 
   botonEliminar: {
-    backgroundColor: "red",
+    backgroundColor: 'red',
     padding: 8,
     marginTop: 10,
     borderRadius: 5,
-    alignSelf: "flex-start"
+    alignSelf: 'flex-start'
   },
 
   footer: {
     marginTop: 10
   },
 
+  resumen: {
+    fontSize: 16,
+    marginBottom: 4
+  },
+
   total: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 10
   },
 
   botonComprar: {
-    backgroundColor: "green",
+    backgroundColor: 'green',
     padding: 12,
     borderRadius: 8,
     marginBottom: 10,
-    alignItems: "center"
+    alignItems: 'center'
   },
 
   botonVaciar: {
-    backgroundColor: "gray",
+    backgroundColor: 'gray',
     padding: 12,
     borderRadius: 8,
-    alignItems: "center"
+    alignItems: 'center'
   },
 
   textoBoton: {
-    color: "white",
-    fontWeight: "bold"
+    color: 'white',
+    fontWeight: 'bold'
   },
 
   vacio: {
-    textAlign: "center",
+    textAlign: 'center',
     marginTop: 50,
     fontSize: 18
   },
+
   productoContainer: {
-      flexDirection: 'row',
-      alignItems: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
   },
+
   infoContainer: {
     marginLeft: 15,
     flex: 1
   },
 
   cantidadContainer: {
-
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: 10
-
   },
-  botonCantidad: {
 
-    backgroundColor: "green",
+  botonCantidad: {
+    backgroundColor: 'green',
     width: 30,
     height: 30,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 8
-
   },
-
 
   textoCantidad: {
-
-    color: "white",
+    color: 'white',
     fontSize: 20,
-    fontWeight: "bold"
-
+    fontWeight: 'bold'
   },
-  cantidad: {
 
+  cantidad: {
     marginHorizontal: 15,
     fontSize: 18,
-    fontWeight: "bold"
-
+    fontWeight: 'bold'
   },
-
-})
+});
