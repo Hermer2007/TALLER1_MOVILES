@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCarritoDB } from '../Services/carritoBD';
 
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   card: {
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#9ddbe9c8',
     padding: 15,
     borderRadius: 10,
     marginBottom: 10

@@ -93,7 +93,7 @@ export default function CarritoScreen() {
             <View style={styles.productoContainer}>
               <Image
                 source={{ uri: item.imagen }}
-                style={{ width: 100, height: 100, borderRadius: 10 }}
+                style={{ width: 110, height: 110, borderRadius: 10 }}
               />
 
               <View style={styles.infoContainer}>
@@ -243,6 +243,8 @@ const styles = StyleSheet.create({
   productoContainer: {
     flexDirection: 'row',
     alignItems: 'flex-start',
+    backgroundColor: '#b3b3b385',
+    borderRadius: 20
   },
 
   infoContainer: {
